@@ -1,0 +1,81 @@
+# ==============================================================================
+# Fabric AI Inspection System — .gitignore
+# ==============================================================================
+
+# ---- Model files (CRITICAL — never commit the 500 MB checkpoint) ----
+*.pth
+*.pt
+*.onnx
+*.pkl
+*.h5
+*.hdf5
+*.tflite
+*.pb
+*.caffemodel
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# ---- Virtual environments ----
+venv/
+.venv/
+env/
+.env/
+
+# ---- IDE ----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ---- OS & Office ----
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# ---- Uploads & results (runtime generated) ----
+backend/uploads/
+backend/results/
+backend/stage1_result.json
+
+# ---- Large Datasets ----
+Dataset/
+Dataset/**
+
+
+# ---- Node / Frontend ----
+node_modules/
+frontend/build/
+frontend/dist/
+.next/
+
+# ---- Environment variables ----
+.env
+.env.local
+.env.*.local
+
+# ---- Database ----
+*.db
+*.sqlite3
+
+# ---- Logs ----
+*.log
+logs/
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+
+# ---- Misc ----
+*.zip
+*.tar.gz
+*.rar

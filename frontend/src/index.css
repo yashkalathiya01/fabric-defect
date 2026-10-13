@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   TEXVISION QA — Industrial Quality Control Suite
+   Neutral WhiteSmoke (#F5F5F5) Theme
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Roboto Mono', Menlo, monospace;
+  
+  /* Neutral WhiteSmoke Palette (#F5F5F5) */
+  --color-bg-base: #F5F5F5;
+  --color-bg-surface: #F5F5F5;
+  --color-bg-elevated: #EAEAEA;
+  --color-bg-hover: #E2E2E2;
+  
+  /* Subtle Precision Neutral Borders */
+  --color-border: #DCDCDC;
+  --color-border-subtle: #E5E5E5;
+  --color-border-active: #171717;
+  
+  /* High-Contrast Neutral Charcoal Text Tokens */
+  --color-text-main: #171717;
+  --color-text-muted: #525252;
+  --color-text-subtle: #737373;
+  
+  /* Brand & Action Accents */
+  --color-primary: #171717;
+  --color-primary-hover: #262626;
+  --color-accent: #2563EB;
+  
+  /* Functional Status & Defect Colors */
+  --color-success: #137333;
+  --color-warning: #B06000;
+  --color-danger: #C5221F;
+  --color-stain: #935B00;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Neutral WhiteSmoke Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4D4D4;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BDBDBD;
+}
+
+/* Slim Custom Slidebar Slider */
+.slidebar-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.slidebar-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slidebar-scrollbar::-webkit-scrollbar-thumb {
+  background: #DCDCDC;
+  border-radius: 4px;
+}
+.slidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #C4C4C4;
+}
+
+/* Modern Enterprise Panel - Soft WhiteSmoke Cards */
+.panel-enterprise {
+  background-color: #F5F5F5;
+  border: 1px solid #DCDCDC;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.panel-enterprise:hover {
+  border-color: #C4C4C4;
+}
+
+.panel-enterprise-active {
+  background-color: #F5F5F5;
+  border: 1px solid #171717;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.panel-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #DCDCDC;
+  background-color: #EAEAEA;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Primary and Secondary Enterprise Buttons */
+.btn-enterprise-primary {
+  background-color: #171717;
+  color: #F5F5F5;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-enterprise-primary:hover {
+  background-color: #262626;
+}
+
+.btn-enterprise-secondary {
+  background-color: #F5F5F5;
+  color: #171717;
+  border: 1px solid #DCDCDC;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-enterprise-secondary:hover {
+  background-color: #EAEAEA;
+  color: #171717;
+  border-color: #C4C4C4;
+}
+
+/* Precision Enterprise Table */
+.table-industrial {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 12.5px;
+}
+
+.table-industrial th {
+  background: #EAEAEA;
+  color: #525252;
+  font-weight: 600;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 10px 14px;
+  border-bottom: 1px solid #DCDCDC;
+  text-align: left;
+}
+
+.table-industrial td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #EAEAEA;
+  color: #171717;
+  font-family: var(--font-mono);
+  background: #F5F5F5;
+}
+
+.table-industrial tr:last-child td {
+  border-bottom: none;
+}
+
+.table-industrial tbody tr:hover td {
+  background-color: #EDEDED;
+}
+
+/* Status Chips - Soft Pill Badges */
+.chip-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  letter-spacing: 0.01em;
+}
+
+.chip-status-pass {
+  background: #E6F4EA;
+  color: #137333;
+  border: 1px solid #CEEAD6;
+}
+
+.chip-status-warn {
+  background: #FEF7E0;
+  color: #B06000;
+  border: 1px solid #FEEFC3;
+}
+
+.chip-status-fail {
+  background: #FCE8E6;
+  color: #C5221F;
+  border: 1px solid #FAD2CF;
+}
+
+.chip-status-steel {
+  background: #EAEAEA;
+  color: #333333;
+  border: 1px solid #DCDCDC;
+}
+
+.chip-status-neutral {
+  background: #EAEAEA;
+  color: #525252;
+  border: 1px solid #DCDCDC;
+}
